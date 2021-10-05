@@ -34,6 +34,7 @@
         body{
             background-color: var(--bgColor);
             padding-top: 4em;
+            font-family: var(--font);
         }
 
         #userPhoto{
@@ -89,7 +90,6 @@
             display: block;
             background-color: var(--accentColor);
             color: var(--bgColor);
-            font-family: var(--font);
             text-align: center;
             margin-bottom: 20px;
             padding: 17px;
@@ -104,11 +104,17 @@
             background-color: var(--bgColor);
             color: var(--accentColor);
         }
+
+        .gram{
+          background-color: var(--accentColor);
+          max-width: 100%;
+          text-align: center;
+          padding-top: 1em;
+        }
       </style>
   </head>
 
   <body>
-    <img src="/assets/img/quote.png" />
     <a href="/">
       <img id="userPhoto" src="/assets/img/avi.jpg" alt="Animated gif of colorful boxes">
     </a>
@@ -120,6 +126,11 @@
       <a class="link" href="https://www.answerlab.com/insights/building-a-dei-ux-research-framework" target="_blank"><strong>Diverse, Equitable, and Inclusive User Research: A Framework for Today and Tomorrow</strong><br />A kit for inclusive User Research.</a>
       <a class="link" href="https://ux.shopify.com/you-cant-just-draw-purple-people-and-call-it-diversity-e2aa30f0c0e8"><strong>You can’t Just Draw Purple People and Call it Diversity</strong><br />Meg Robichaud talks about how whimsical illustrations aren't as inclusive as you might think.</a>
       <a class="link" href="https://www.answerlab.com/insights/the-business-case-for-inclusive-research">The Business Case for Inclusive Research</a>
+      <div class="gram">
+        For the 'gram:
+        <img class="gram" src="/assets/img/quote.png" />
+      </div>
+
     </div>
   </body>
 </html>
