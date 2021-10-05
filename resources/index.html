@@ -13,29 +13,112 @@
       <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
       <link rel="manifest" href="/assets/icons/site.webmanifest">
 
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q6R5Q8862"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7Q6R5Q8862');
+      </script>
+
+      <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+        :root {
+            --bgColor:#1C1C1C;
+            --accentColor: #E6E6E6;
+            --font: 'Karla', sans-serif;
+        }
+
+        body{
+            background-color: var(--bgColor);
+            padding-top: 4em;
+        }
+
+        #userPhoto{
+            width: 110px;
+            height: 110px;
+            display: block;
+            margin: 35px auto 20px;
+            border-radius: 50%;
+        }
+
+        #userName{
+            color: #bbb;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.25;
+            display: block;
+            font-family: var(--font);
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        h1{
+          color: #bbb;
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 1.25;
+          display: block;
+          font-family: var(--font);
+          width: 100%;
+          text-align: center;
+          text-decoration: none;
+        }
+        h2{
+          color: #bbb;
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 1.25;
+          display: block;
+          font-family: var(--font);
+          width: 100%;
+          text-align: center;
+          text-decoration: none;
+        }
+
+        #links{
+            max-width: 675px;
+            width: auto;
+            display: block;
+            margin: 27px auto;
+        }
+        .link{
+            display: block;
+            background-color: var(--accentColor);
+            color: var(--bgColor);
+            font-family: var(--font);
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 17px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all .25s cubic-bezier(.08,.59,.29,.99);
+            border: solid var(--accentColor) 2px;
+        }
+
+
+        .link:hover{
+            background-color: var(--bgColor);
+            color: var(--accentColor);
+        }
+      </style>
   </head>
 
   <body>
-    <header>
-      <h1>Diversity Resources</h1>
-    </header>
-    <section>
-      <h2>Readings</h2>
-      <ul>
-        <li><a href="https://uxdesign.cc/in-search-of-lost-image-representing-gender-non-conforming-people-in-ux-70bc5a2c7ba1">In Search of Lost Image</a></li>
-        https://www.answerlab.com/insights/building-a-dei-ux-research-framework
-        https://www.answerlab.com/insights/the-business-case-for-inclusive-research
-        <li></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Stock Imagery</h2>
-      <ul>
-        <li></li>
-      </ul>
-    </section>
-    <footer>
-      <p>Footer information goes here</p>
-    </footer>
+    <a href="/">
+      <img id="userPhoto" src="/assets/img/avi.jpg" alt="Animated gif of colorful boxes">
+    </a>
+    <!-- a href="https://www.twitter.com/mjchamplin" id="userName" target="_blank">@mjchamplin</a-->
+    <h1>Resources</h1>
+    <h2>Pushing for More Inclusive Foundations</h2>
+    <div id="links">
+      <a class="link" href="https://uxdesign.cc/in-search-of-lost-image-representing-gender-non-conforming-people-in-ux-70bc5a2c7ba1" target="_blank"><strong>In Search of Lost Image</strong></br>My piece about trying to find suitable stock imagery for a gender-non-confirming persona.</a>
+      <a class="link" href="https://www.answerlab.com/insights/building-a-dei-ux-research-framework" target="_blank"><strong>Diverse, Equitable, and Inclusive User Research: A Framework for Today and Tomorrow</strong><br />A kit for inclusive User Research.</a>
+      <a class="link" href="https://ux.shopify.com/you-cant-just-draw-purple-people-and-call-it-diversity-e2aa30f0c0e8"><strong>You can’t Just Draw Purple People and Call it Diversity</strong><br />Meg Robichaud talks about how whimsical illustrations aren't as inclusive as you might think.</a>
+      <a class="link" href="https://www.answerlab.com/insights/the-business-case-for-inclusive-research">The Business Case for Inclusive Research</a>
+    </div>
   </body>
 </html>
