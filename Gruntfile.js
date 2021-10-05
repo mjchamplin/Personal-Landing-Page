@@ -20,25 +20,6 @@ module.exports = function(grunt) {
       }
     },
 
-    imagemin: {
-      jpg: {
-        options: {
-          progressive: true
-        },
-        files: [
-          {
-            // Set to true to enable the following options…
-            expand: true,
-            // cwd is 'current working directory'
-            cwd: 'includes/img/',
-            src: ['**/*.jpg'],
-            // Could also match cwd. i.e. project-directory/img/
-            dest: 'assets/img/',
-            ext: '.jpg'
-          }
-        ]
-      }
-    },
 
     clean: {
       build: {
@@ -81,7 +62,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -89,5 +69,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', ['sass:dist']);
-  grunt.registerTask('build', ['clean', 'copy', 'sass:build','imagemin', 'uglify']);
+  grunt.registerTask('build', ['clean', 'copy', 'sass:build', 'uglify']);
 };
