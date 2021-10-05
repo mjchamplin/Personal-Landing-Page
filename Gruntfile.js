@@ -45,6 +45,12 @@ module.exports = function(grunt) {
         src: ['**/*.png', '**/*.ico', '**/*.webmanifest'],
         dest: 'assets/icons',
         expand: true
+      },
+      images: {
+        cwd: 'includes/img/',
+        src: ['**/*.png', '**/*.jpg'],
+        dest: 'assets/img',
+        expand: true
       }
     },
 
