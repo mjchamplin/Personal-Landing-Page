@@ -13,6 +13,10 @@
       <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
       <link rel="manifest" href="/assets/icons/site.webmanifest">
 
+      <!-- ionicons components -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q6R5Q8862"></script>
       <script>
@@ -60,6 +64,7 @@
             width: auto;
             display: block;
             margin: 27px auto;
+            text-align: center;
         }
         .link{
             display: block;
@@ -83,6 +88,23 @@
             background-color: var(--bgColor);
             color: var(--accentColor);
         }
+
+        #icons {
+          margin-bottom: 1rem;
+        }
+        ion-icon {
+            color: white;
+            font-size: 28px;
+            margin-right: .5rem;
+        }
+        ion-icon.last {
+          margin-right: 0;
+        }
+        ion-icon:hover {
+          color: #FCE8FD
+        }
+
+
       </style>
   </head>
 
@@ -90,14 +112,16 @@
     <a href="/">
       <img id="userPhoto" src="https://media.giphy.com/media/1X7gN6XKLLKcfQR79i/source.gif" alt="Animated gif of colorful boxes">
     </a>
-    <a href="https://www.twitter.com/mjchamplin" id="userName" target="_blank">@mjchamplin</a>
+    <p id="userName">@mjchamplin</p>
     <div id="links">
+      <div id="icons">
+        <a href="https://twitter.com/mjchamplin"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="https://instagram.com/mjchamplin"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://mastodon.cc/@mjchamplin"><ion-icon name="logo-mastodon" class="last"></ion-icon></a>
+      </div>
       <a class="link" href="/">About Me</a>
-      <a class="link" href="https://www.patreon.com/orangecatparade" target="_blank">Patreon - <span class="new">New!</span></a>
-      <a class="link" href="http://mjchamplin.com" target="_blank">Design Portfolio</a>
-      <a class="link" href="http://photo.mjchamplin.com" target="_blank">Photography Portfolio</a>
-      <a class="link" href="https://instagram.com/mjchamplin" target="_blank">Instagram (Personal)</a>
-      <a class="link" href="https://instagram.com/michaeljchamplin" target="_blank">Instagram (Fine Art)</a>
+      <a class="link" href="https://www.patreon.com/orangecatparade" target="_blank">Patreon</a>
+      <a class="link" href="http://photo.mjchamplin.com" target="_blank">Photography</a>
     </div>
   </body>
 </html>
