@@ -30,13 +30,16 @@
       <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
         :root {
-            --bgColor:#1C1C1C;
-            --accentColor: #E6E6E6;
+            --bgColor:#E6E6E6;
+            --accentColor: #1C1C1C;
             --font: 'Karla', sans-serif;
+            --shadowColor: #888;
+            --keyColor: #CC5A60;
         }
 
         body{
             background-color: var(--bgColor);
+            padding: 0 16px;
         }
 
         #userPhoto{
@@ -48,7 +51,7 @@
         }
 
         .text{
-            color: #bbb;
+            color: var(--accentColor);
             font-size: 1rem;
             font-weight: 600;
             line-height: 1.25;
@@ -60,7 +63,7 @@
         }
 
         #links{
-            max-width: 675px;
+            max-width: 520px;
             width: auto;
             display: block;
             margin: 27px auto;
@@ -77,23 +80,26 @@
             text-decoration: none;
             font-size: 1rem;
             transition: all .25s cubic-bezier(.08,.59,.29,.99);
-            border: solid var(--accentColor) 2px;
+            /*border: solid var(--accentColor) 2px;
+            border: solid red 0 8px 8px 0;*/
+            box-shadow: 6px 6px 0 0 var(--shadowColor); 
         }
 
         .new {
             color: red;
 
         }
-        .link:hover{
-            background-color: var(--bgColor);
-            color: var(--accentColor);
+        .link:hover, .link:active {
+            background-color: var(--keyColor);
+            color: var(--bgColor);
+            box-shadow: 10px 10px 0 0 var(--shadowColor);
         }
 
         #icons {
           margin-bottom: 1rem;
         }
         ion-icon {
-            color: white;
+            color: var(--accentColor);
             font-size: 28px;
             margin-right: .5rem;
         }
@@ -101,29 +107,33 @@
           margin-right: 0;
         }
         ion-icon:hover {
-          color: #FCE8FD
+          color: var(--keyColor)
         }
 
+        @media (prefers-color-scheme: dark) {
 
+          :root {        
+            --bgColor: #202124;
+            --accentColor: white;
+          }
+        }
       </style>
   </head>
 
   <body>
     <a href="/">
-      <img id="userPhoto" src="https://media.giphy.com/media/1X7gN6XKLLKcfQR79i/source.gif" alt="Animated gif of colorful boxes">
+      <img id="userPhoto" src="https://media.giphy.com/media/UT5C4hCvmlSzJ7QeQy/giphy.gif" alt="Animated gif of colorful boxes">
     </a>
     <p class="text">@mjchamplin</p>
     <div id="links">
       <div id="icons">
         <a href="https://twitter.com/mjchamplin"><ion-icon name="logo-twitter"></ion-icon></a>
-        <a href="https://www.facebook.com/michael.j.champlin"><ion-icon name="logo-facebook"></ion-icon></a>
         <a href="https://instagram.com/mjchamplin"><ion-icon name="logo-instagram"></ion-icon></a>
-        <a href="https://mastodon.cc/@mjchamplin"><ion-icon name="logo-mastodon" class="last"></ion-icon></a>
+        <a href="https://mastodon.cc/@mjchamplin"><ion-icon name="logo-mastodon"></ion-icon></a>
+        <a href="https://github.com/mjchamplin"><ion-icon name="logo-github" class="last"</a>
       </div>
-
-      <a class="link" href="https://mjchamplin.tumblr.com" target="_blank">Tumblr</a>
-      <a class="link" href="https://bsky.app/profile/champl.in" target="_blank">Bluesky Social <span class="new">new!</span></a>
-      <a class="link" href="http://photo.mjchamplin.com" target="_blank">Photography</a>
+      <a class="link" href="https://bsky.app/profile/champl.in" target="_blank">Bluesky Social</a>
+      <a class="link" href="http://photo.mjchamplin.com" target="_blank">Photography Portfolio</a>
       <!--<a class="link" href="https://www.patreon.com/orangecatparade" target="_blank">Patreon</a>-->
       <!--<a class="link" href="/">About Me</a>-->
     </div>
